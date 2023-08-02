@@ -1,0 +1,12 @@
+{
+    "translation": {
+        "continuer": "Continuer",
+        "titleonboarding": "Suivez votre voiture professionel comme il faut",
+        "selectlang": "Selectionner votre langue",
+        "login": "Se connecter",
+        "email": "Email",
+        "password": "Password",
+        "emailerr": "Email Format Invalid",
+        "createaccount": "S'inscrire"
+    }
+}
