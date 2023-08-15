@@ -6,6 +6,7 @@ import { Asset } from 'expo-asset';
 
 import Layout from './app/layout/layout';
 
+
 Asset.loadAsync(Assets);
 
 registerRootComponent(Layout);

@@ -8,8 +8,10 @@ import { StatusBar } from 'expo-status-bar';
 
 
 
-export function Header ({props}) {
-    const navigation = useNavigation();
+
+export function Header (props) {
+    
+    const router = useNavigation();
 
     return (
         <>
@@ -24,19 +26,13 @@ export function Header ({props}) {
             containerStyle={styles.headerContainer}
             leftComponent={
                 <View style={styles.headerRight}>
-                    <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.openDrawer()) }>
+                    <TouchableOpacity onPress={() => router.dispatch(DrawerActions.openDrawer) }>
                         <Icon name="menu" color="white" size={34} />
                     </TouchableOpacity>
                 </View>
             }
-            centerComponent={{ text: 'Acceuil', style: styles.heading }}
-            rightComponent={
-                <View style={styles.headerRight}>
-                    <TouchableOpacity onPress={() => {}}>
-                        <Icon name="plus" color="white" size={34} type='font-awesome' />
-                    </TouchableOpacity>
-                </View>
-            }
+            centerComponent={{ text: props.headerTitle, style: styles.heading ,}}
+            
             />
 
 
@@ -57,7 +53,7 @@ const styles = StyleSheet.create({
     heading: {
       color: 'white',
       fontSize: SIZES.large,
-      fontFamily: FONT.bold,
+      fontFamily: FONT.regular,
       marginTop: 7
     },
     headerRight: {

@@ -7,7 +7,7 @@ import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/
 import DrawerNavigation from '../navigations/DrawerNavigation';
 
 const Layout = (props) => {
-    const StackComponent = createStackNavigator();
+    const Stack = createStackNavigator();
 
     const [fontsLoaded] = useFonts({
         RBThin: require('../../assets/fonts/Roboto-Thin.ttf'),
